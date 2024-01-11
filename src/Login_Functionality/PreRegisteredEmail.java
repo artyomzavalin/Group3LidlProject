@@ -15,7 +15,7 @@ public class PreRegisteredEmail extends DriverClass {
 
     @Test
 
-    public void preRegisteredEmailTest(){
+    public void preRegisteredEmailTest() {
 
         driver.get("https://www.lidl.com/");
 
@@ -53,19 +53,18 @@ public class PreRegisteredEmail extends DriverClass {
         lastName.sendKeys("Adam");
 
 
-       WebElement emailInput = driver.findElement(By.cssSelector("input[name=\"email\"]"));
-       emailInput.sendKeys("leeno2020@gmail.com");
+        WebElement emailInput = driver.findElement(By.cssSelector("input[name=\"email\"]"));
+        emailInput.sendKeys("leeno2020@gmail.com");
 
-       WebElement errorMessage = driver.findElement(By.cssSelector("span[class=\"email-taken-inline-error\"]"));
+        WebElement errorMessage = driver.findElement(By.cssSelector("span[class=\"email-taken-inline-error\"]"));
 
-       if  (errorMessage.getText().contains("This email is already registered. Want to sign in or recover your password?")){
-           System.out.println("Test Passed: Correct error message displayed.");
+        if (errorMessage.getText().contains("This email is already registered. Want to sign in or recover your password?")) {
+            System.out.println("Test Passed: Correct error message displayed.");
 
-       } else {
-           System.out.println("Test Failed: Incorrect error message displayed.");
-       }
-
+        } else {
+            System.out.println("Test Failed: Incorrect error message displayed.");
         }
 
     }
 
+}
