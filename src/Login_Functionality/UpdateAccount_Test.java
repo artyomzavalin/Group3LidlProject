@@ -36,7 +36,7 @@ public class UpdateAccount_Test extends DriverClass {
         password.sendKeys("Shimo@2020");
 
 
-        WebElement signIn = driver.findElement(By.cssSelector("button[data-test=\"signInButton\""));
+        WebElement signIn = driver.findElement(By.cssSelector("button[data-test=\"signInButton\"]"));
         signIn.click();
 
 
@@ -46,10 +46,24 @@ public class UpdateAccount_Test extends DriverClass {
         WebElement myName = driver.findElement(By.cssSelector("small[class=\"email\"]"));
         myName.click();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         String expectedURL = "https://www.lidl.com/profile/general";
         Assert.assertTrue(driver.getCurrentUrl().equals(expectedURL));
+
+
+        WebElement firstName = driver.findElement(By.cssSelector("input[name=\"firstName\"]"));
+        firstName.clear();
+        firstName.sendKeys("Leeno");
+
+        WebElement lastName = driver.findElement(By.cssSelector("input[name=\"lastName\"]"));
+        lastName.clear();
+        lastName.sendKeys("Adam");
+
+
+
+
+
 
 
 
