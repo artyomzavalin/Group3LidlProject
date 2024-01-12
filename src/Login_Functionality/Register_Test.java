@@ -47,6 +47,6 @@ public class Register_Test extends DriverClass {
 
         birtday.sendKeys("000");
 
-        MyMethods.myWait(2);
+        MyMethods.myWait(1);
 
 }
