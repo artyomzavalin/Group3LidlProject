@@ -56,7 +56,7 @@ public class Register_Test extends DriverClass {
             System.out.println("Test Passed: Correct error message displayed.");
 
         } else {
-            System.out.println("Test Failed: Incorrect error message displayed.");
+            System.out.println("Test Failed: Incorrect error message is displayed.");
         }
 
     }
