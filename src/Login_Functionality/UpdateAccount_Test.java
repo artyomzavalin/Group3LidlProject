@@ -1,6 +1,7 @@
 package Login_Functionality;
 
 import Utilities.DriverClass;
+import Utilities.MyMethods;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -54,11 +55,22 @@ public class UpdateAccount_Test extends DriverClass {
 
         WebElement firstName = driver.findElement(By.cssSelector("input[name=\"firstName\"]"));
         firstName.clear();
-        firstName.sendKeys("Leeno");
+        firstName.sendKeys("Shimo");
 
         WebElement lastName = driver.findElement(By.cssSelector("input[name=\"lastName\"]"));
         lastName.clear();
-        lastName.sendKeys("Adam");
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
