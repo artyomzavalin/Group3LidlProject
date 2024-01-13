@@ -41,7 +41,7 @@ public class Register_Test extends DriverClass {
 
 
         WebElement firstName = driver.findElement(By.cssSelector("input[name=\"firstName\"]"));
-        firstName.sendKeys("Leeno");
+        firstName.sendKeys("Leen");
 
 
         WebElement lastName = driver.findElement(By.cssSelector("input[name=\"lastName\"]"));
