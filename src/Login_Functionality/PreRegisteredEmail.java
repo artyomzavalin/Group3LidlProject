@@ -19,7 +19,6 @@ public class PreRegisteredEmail extends DriverClass {
 
         driver.get("https://www.lidl.com/");
 
-
         WebElement closeGreenTab = driver.findElement(By.cssSelector("img[alt=\"close-white description\"]"));
         closeGreenTab.click();
 
@@ -31,21 +30,18 @@ public class PreRegisteredEmail extends DriverClass {
         WebElement acceptCookies = driver.findElement(By.cssSelector("div[id=\"onetrust-close-btn-container\"]"));
         acceptCookies.click();
 
-        String expectedURL = "https://www.lidl.com/";
+       WebElement signIn = driver.findElement(By.linkText("sign in"));
+       signIn.click();
 
-        Assert.assertTrue(driver.getCurrentUrl().equals(expectedURL));
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-
-        WebElement joinMyLidl = driver.findElement(By.cssSelector("a[data-test=\"register\"]"));
-
-
-        js.executeScript("arguments[0].scrollIntoView(true);", joinMyLidl);
-
+        WebElement joinMyLidl = driver.findElement(By.cssSelector("a[data-test=\"joinButton\"]"));
         joinMyLidl.click();
 
-        WebElement firstName = driver.findElement(By.cssSelector("input[id=\"input0\"]"));
+
+        String expectedURL = "https://www.lidl.com/register";
+        Assert.assertTrue(driver.getCurrentUrl().equals(expectedURL));
+
+
+        WebElement firstName = driver.findElement(By.cssSelector("input[name=\"firstName\"]"));
         firstName.sendKeys("Leeno");
 
 
