@@ -1,5 +1,6 @@
 package Login_Functionality;
 
+
 import Utilities.DriverClass;
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,9 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+
+
 
 public class Register_Test extends DriverClass {
+
 
     @Test
   public void registerTest(){
@@ -59,6 +62,5 @@ public class Register_Test extends DriverClass {
             System.out.println("Test didn't succeed: Incorrect error message is displayed.");
         }
 
-    }
-
+  }
 }
