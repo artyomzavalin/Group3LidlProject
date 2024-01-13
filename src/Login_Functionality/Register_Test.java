@@ -53,7 +53,7 @@ public class Register_Test extends DriverClass {
         WebElement errorMessage = driver.findElement(By.cssSelector("span[class=\"email-taken-inline-error\"]"));
 
         if (errorMessage.getText().contains("This email is already registered. Want to sign in or recover your password?")) {
-            System.out.println("Test Passed: Correct error message displayed.");
+            System.out.println("Test Passed: Correct error message is displayed.");
 
         } else {
             System.out.println("Test Failed: Incorrect error message is displayed.");
